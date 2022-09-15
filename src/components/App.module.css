@@ -8,12 +8,12 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 680px;
   }
 }
 @media screen and (min-width: 1440px) {
   .container {
-    width: 1440px;
+    width: 960px;
     
   }
 }

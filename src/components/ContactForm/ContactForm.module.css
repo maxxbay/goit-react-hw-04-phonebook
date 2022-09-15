@@ -1,21 +1,19 @@
-.form {
-  margin-bottom: 30px;
-}
-
 .label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .title {
   font-weight: 600;
   color: var(--main-text-color);
   margin-bottom: 5px;
+  
 }
 
 .input {
-  height: 30px;
+  
+  height: 40px;
   padding: 0 10px 0 10px;
 
   border: 1px solid var(--second-bg-color);
@@ -35,9 +33,10 @@
 }
 
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  
 
   width: 200px;
   height: 40px;
@@ -54,4 +53,10 @@
 .button:hover,
 .button:focus {
   background-color: var(--second-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: 300px;
+  }
 }

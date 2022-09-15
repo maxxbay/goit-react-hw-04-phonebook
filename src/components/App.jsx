@@ -10,16 +10,18 @@ import Modal from './Modal';
 import s from './App.module.css';
 
 function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(
+    JSON.parse(window.localStorage.getItem('contacts')) ?? ''
+  );
   const [filter, setFilter] = useState('');
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const contacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(contacts);
-    // console.log(parsedContacts);
-    parsedContacts && setContacts(parsedContacts);
-  }, []);
+  // useEffect(() => {
+  //   const contacts = localStorage.getItem('contacts');
+  //   const parsedContacts = JSON.parse(contacts);
+  //   console.log(parsedContacts);
+  //   parsedContacts && setContacts(parsedContacts);
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));

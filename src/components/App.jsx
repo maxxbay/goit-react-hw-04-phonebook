@@ -18,8 +18,7 @@ function App() {
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
     // console.log(parsedContacts);
-    setContacts(parsedContacts);
-    // parsedContacts ? setContacts(parsedContacts) : setContacts([]);
+    parsedContacts && setContacts(parsedContacts);
   }, []);
 
   useEffect(() => {
